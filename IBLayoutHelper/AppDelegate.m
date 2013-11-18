@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GlobalShortcuts.h"
 
 @interface AppDelegate()
 @property (assign) IBOutlet NSWindow *window;
@@ -18,8 +19,12 @@
 
 @implementation AppDelegate
 
++ (void)initialize {
+  [GlobalShortcuts setupShortcuts];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  _window.alphaValue = 0.5;
+  _window.alphaValue = 0.7;
 }
 
 - (IBAction)openPressed:(id)sender {
