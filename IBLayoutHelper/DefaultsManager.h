@@ -11,7 +11,8 @@
 @interface DefaultsManager : NSObject
 
 typedef enum {
-  kDefaultsKeyGlobalShortcuts
+  kDefaultsKeyGlobalShortcuts,
+  kDefaultsKeyMainWindowAlpha
 } DefaultsKey;
 
 + (id)objectForKey:(DefaultsKey)key;

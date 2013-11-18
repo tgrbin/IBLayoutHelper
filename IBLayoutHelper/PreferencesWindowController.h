@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  PreferencesWindowController.h
 //  IBLayoutHelper
 //
 //  Created by Tomislav Grbin on 18/11/13.
@@ -8,8 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
-
-@property (assign) IBOutlet NSWindow *window;
+@interface PreferencesWindowController : NSWindowController
 
 @end

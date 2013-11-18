@@ -14,7 +14,8 @@ static NSDictionary *defaultValues;
 
 + (void)initialize {
   defaultValues = @{
-    @(kDefaultsKeyGlobalShortcuts): @{}
+    @(kDefaultsKeyGlobalShortcuts): @{},
+    @(kDefaultsKeyMainWindowAlpha): @0.7
   };
 }
 

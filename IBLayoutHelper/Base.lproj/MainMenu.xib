@@ -25,7 +25,11 @@
                             <menuItem isSeparatorItem="YES" id="236">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Preferences…" keyEquivalent="," id="129"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129">
+                                <connections>
+                                    <action selector="showWindow:" target="Jao-fN-cu1" id="5S9-QU-dpp"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="143">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
@@ -150,9 +154,11 @@
         <customObject id="494" customClass="AppDelegate">
             <connections>
                 <outlet property="mainImageView" destination="VVd-Wg-gGg" id="ZzF-pt-QVh"/>
+                <outlet property="preferencesWindowController" destination="Jao-fN-cu1" id="4xN-Sb-DZ6"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
+        <customObject id="Jao-fN-cu1" customClass="PreferencesWindowController"/>
     </objects>
 </document>

@@ -28,6 +28,8 @@
 		79A9BA0A183A7C2800E32F6A /* SRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9BA04183A7C2800E32F6A /* SRValidator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		79A9BA0D183A7D8100E32F6A /* DefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9BA0C183A7D8100E32F6A /* DefaultsManager.m */; };
 		79A9BA0F183A7FA300E32F6A /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A9BA0E183A7FA300E32F6A /* Carbon.framework */; };
+		79A9BA14183A85E000E32F6A /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A9BA12183A85E000E32F6A /* PreferencesWindowController.m */; };
+		79A9BA15183A85E000E32F6A /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79A9BA13183A85E000E32F6A /* PreferencesWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,9 @@
 		79A9BA0B183A7D8100E32F6A /* DefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultsManager.h; sourceTree = "<group>"; };
 		79A9BA0C183A7D8100E32F6A /* DefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultsManager.m; sourceTree = "<group>"; };
 		79A9BA0E183A7FA300E32F6A /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		79A9BA11183A85E000E32F6A /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		79A9BA12183A85E000E32F6A /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		79A9BA13183A85E000E32F6A /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				79A9B9F8183A7C2800E32F6A /* ShortcutRecorder */,
+				79A9BA10183A859900E32F6A /* Preferences */,
 				79A9BA0B183A7D8100E32F6A /* DefaultsManager.h */,
 				79A9BA0C183A7D8100E32F6A /* DefaultsManager.m */,
 				79A9B9F5183A7BD000E32F6A /* GlobalShortcuts.h */,
@@ -209,6 +215,16 @@
 				79A9BA04183A7C2800E32F6A /* SRValidator.m */,
 			);
 			path = ShortcutRecorder;
+			sourceTree = "<group>";
+		};
+		79A9BA10183A859900E32F6A /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				79A9BA11183A85E000E32F6A /* PreferencesWindowController.h */,
+				79A9BA12183A85E000E32F6A /* PreferencesWindowController.m */,
+				79A9BA13183A85E000E32F6A /* PreferencesWindowController.xib */,
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A9BA15183A85E000E32F6A /* PreferencesWindowController.xib in Resources */,
 				79A9B9C6183A677500E32F6A /* InfoPlist.strings in Resources */,
 				79A9B9D4183A677500E32F6A /* Images.xcassets in Resources */,
 				79A9B9CC183A677500E32F6A /* Credits.rtf in Resources */,
@@ -314,6 +331,7 @@
 				79A9BA08183A7C2800E32F6A /* SRRecorderCell.m in Sources */,
 				79A9BA09183A7C2800E32F6A /* SRRecorderControl.m in Sources */,
 				79A9BA06183A7C2800E32F6A /* SRCommon.m in Sources */,
+				79A9BA14183A85E000E32F6A /* PreferencesWindowController.m in Sources */,
 				79A9B9CF183A677500E32F6A /* AppDelegate.m in Sources */,
 				79A9BA0D183A7D8100E32F6A /* DefaultsManager.m in Sources */,
 				79A9BA07183A7C2800E32F6A /* SRKeyCodeTransformer.m in Sources */,

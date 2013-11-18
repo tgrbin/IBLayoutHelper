@@ -8,10 +8,12 @@
 
 #import "AppDelegate.h"
 #import "GlobalShortcuts.h"
+#import "PreferencesWindowController.h"
+#import "DefaultsManager.h"
 
 @interface AppDelegate()
-@property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *mainImageView;
+@property (nonatomic, strong) IBOutlet PreferencesWindowController *preferencesWindowController;
 
 @property (nonatomic, strong) NSURL *mainImageURL;
 @property (nonatomic, strong) NSImage *mainImage;
@@ -24,7 +26,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  _window.alphaValue = 0.7;
+  _window.alphaValue = [[DefaultsManager objectForKey:kDefaultsKeyMainWindowAlpha] doubleValue];
 }
 
 - (IBAction)openPressed:(id)sender {
