@@ -11,12 +11,15 @@
 @interface AppDelegate()
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *mainImageView;
+
+@property (nonatomic, strong) NSURL *mainImageURL;
 @property (nonatomic, strong) NSImage *mainImage;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+  _window.alphaValue = 0.5;
 }
 
 - (IBAction)openPressed:(id)sender {
@@ -28,9 +31,14 @@
   panel.title = @"Open";
   
   if ([panel runModal] == NSFileHandlingPanelOKButton) {
-    NSURL *url = panel.URLs[0];
-    self.mainImage = [[NSImage alloc] initWithContentsOfURL:url];
+    self.mainImageURL = panel.URL;
   }
+}
+
+- (void)setMainImageURL:(NSURL *)mainImageURL {
+  _mainImageURL = mainImageURL;
+  [[NSDocumentController sharedDocumentController] noteNewRecentDocumentURL:mainImageURL];
+  self.mainImage = [[NSImage alloc] initWithContentsOfURL:mainImageURL];
 }
 
 - (void)setMainImage:(NSImage *)mainImage {
@@ -42,6 +50,11 @@
                                _mainImage.size.width,
                                _mainImage.size.height)
             display:YES];
+}
+
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename {
+  self.mainImageURL = [NSURL fileURLWithPath:filename];
+  return YES;
 }
 
 @end
